@@ -1,0 +1,7 @@
+{
+  "name": "Legion-PWA",
+  "integrations": {
+    "capacitor": {}
+  },
+  "type": "vue"
+}
