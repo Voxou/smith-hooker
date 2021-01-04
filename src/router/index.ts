@@ -1,6 +1,7 @@
 import { createRouter, createWebHistory } from '@ionic/vue-router';
 import { RouteRecordRaw } from 'vue-router';
 import Tabs from '../views/Tabs.vue';
+import Auth from '../views/Auth.vue';
 import Register from '../views/Register.vue';
 
 const routes: Array<RouteRecordRaw> = [
@@ -37,6 +38,10 @@ const routes: Array<RouteRecordRaw> = [
         component: () => import('@/views/Tab5.vue')
       }
     ]
+  },
+  {
+    path:'/auth/',
+    component: Auth,
   },
   {
     path:'/register',
