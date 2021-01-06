@@ -1,5 +1,5 @@
 {
-  "name": "Legion-PWA",
+  "name": "legion-pwa",
   "version": "0.0.1",
   "private": true,
   "scripts": {
@@ -39,5 +39,19 @@
     "typescript": "~3.9.3",
     "vue-jest": "^5.0.0-0"
   },
-  "description": "An Ionic project"
+  "description": "An Ionic project",
+  "main": ".eslintrc.js",
+  "directories": {
+    "test": "tests"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/ManonJK/Legion-Web.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/ManonJK/Legion-Web/issues"
+  },
+  "homepage": "https://github.com/ManonJK/Legion-Web#readme"
 }
