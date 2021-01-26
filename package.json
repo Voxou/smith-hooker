@@ -11,7 +11,6 @@
   },
   "dependencies": {
     "@capacitor/core": "2.4.3",
-    "@ionic-native/google-maps": "^5.5.0",
     "@ionic/vue": "^5.5.2",
     "@ionic/vue-router": "^5.4.0",
     "bootstrap": "^4.5.3",
