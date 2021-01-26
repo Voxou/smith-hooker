@@ -51,6 +51,6 @@ export default {
 <style lang="css">
 .map {
     width: 100%;
-    height: 300px;
+    height: 100%;
 }
 </style>

@@ -13,7 +13,7 @@
       </ion-header>
         <g-map></g-map>
       <div id="map" style="height:100%;"></div>
-      <ExploreContainer name="Carte page" />
+
     </ion-content>
   </ion-page>
 </template>
@@ -22,13 +22,13 @@
 
 
 import { IonPage, IonHeader, IonToolbar, IonTitle, IonContent } from '@ionic/vue';
-import ExploreContainer from '@/components/ExploreContainer.vue';
+//import ExploreContainer from '@/components/ExploreContainer.vue'; 
 import { defineComponent } from 'vue';
 import GMap from "./Gmap.vue";
 
 
 export default  {
   name: 'Tab1',
-  components: { ExploreContainer, IonHeader, IonToolbar, IonTitle, IonContent, IonPage, GMap }
+  components: { IonHeader, IonToolbar, IonTitle, IonContent, IonPage, GMap }
 }
 </script>
