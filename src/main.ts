@@ -24,6 +24,35 @@ import '@ionic/vue/css/display.css';
 import './theme/variables.css';
 import './theme/style.css';
 
+/* Google Maps API */
+import Vue from 'vue';
+
+
+
+import * as VueGoogleMaps from 'vue2-google-maps';
+
+/*export default class use extends Vue {
+  VueGoogleMaps, 
+  options: {
+    load: {
+      key: 'https://maps.googleapis.com/maps/api/js?key=AIzaSyBJ-_sW8y-yaYKFfnjzOuo8y6GNkj23iEM&callback=initMap'
+    }
+  }
+}; 
+/*
+import {
+  GoogleMaps,
+  GoogleMap,
+  GoogleMapsMapTypeId,
+  GoogleMapsEvent,
+  GoogleMapOptions,
+  CameraPosition,
+  MarkerOptions,
+  Marker,
+  Environment
+} from '@ionic-native/google-maps';*/
+
+
 const app = createApp(App)
   .use(IonicVue)
   .use(router);

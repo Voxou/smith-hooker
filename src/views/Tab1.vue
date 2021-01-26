@@ -11,13 +11,14 @@
           <ion-title size="large">Carte</ion-title>
         </ion-toolbar>
       </ion-header>
+        <g-map></g-map>
       <div id="map" style="height:100%;"></div>
       <ExploreContainer name="Carte page" />
     </ion-content>
   </ion-page>
 </template>
 
-<script async defer src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBJ-_sW8y-yaYKFfnjzOuo8y6GNkj23iEM&callback=initMap"
+<!-- <script async defer src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBJ-_sW8y-yaYKFfnjzOuo8y6GNkj23iEM&callback=initMap"
  type="text/javascript"></script>
 <script lang="ts">
 let map: google.maps.Map;
@@ -40,13 +41,18 @@ function initMap(): void {
     });
 
   }
-}
+}-->
+<script lang="ts">
+
 
 import { IonPage, IonHeader, IonToolbar, IonTitle, IonContent } from '@ionic/vue';
 import ExploreContainer from '@/components/ExploreContainer.vue';
+import { defineComponent } from 'vue';
+import GMap from "./Gmap.vue";
+
 
 export default  {
   name: 'Tab1',
-  components: { ExploreContainer, IonHeader, IonToolbar, IonTitle, IonContent, IonPage }
+  components: { ExploreContainer, IonHeader, IonToolbar, IonTitle, IonContent, IonPage, GMap }
 }
 </script>
