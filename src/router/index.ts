@@ -3,6 +3,7 @@ import { RouteRecordRaw } from 'vue-router';
 import Tabs from '../views/Tabs.vue';
 import Auth from '../views/Auth.vue';
 import Register from '../views/Register.vue';
+import Artisan from '../views/Artisan.vue';
 
 const routes: Array<RouteRecordRaw> = [
   {
@@ -46,6 +47,10 @@ const routes: Array<RouteRecordRaw> = [
   {
     path:'/register',
     component : Register
+  }, 
+  {
+    path:'/artisan',
+    component : Artisan
   }
 ]
 
