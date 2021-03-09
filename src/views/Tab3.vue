@@ -84,11 +84,12 @@ export default  {
 
 ion-card {
   font-family: 'Linux Libertine', sans-serif;
-  background-color: #EDD6B6;
+  background-color: #f8c09c;
 }
 
 
 ion-title {
+  font-weight: 700;
   font-family: 'Roboto', sans-serif!important;
 }
 
