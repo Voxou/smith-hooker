@@ -2,7 +2,7 @@
   <ion-page>
     <ion-header>
       <ion-toolbar>
-        <ion-title class="titre">Accueil</ion-title>
+        <ion-title class="logo">Accueil</ion-title>         
       </ion-toolbar>
     </ion-header>
     <ion-content :scroll-events="true" ref="content">
@@ -17,7 +17,7 @@
           Keep close to Nature's heart... and break clear away, once in awhile,
           and climb a mountain or spend a week in the woods. Wash your spirit clean.
         </ion-card-content>
-        <ion-button href="/artisan" size="small" style="float: right;">Default</ion-button>
+        <ion-button color="secondary" href="/artisan" size="small" style="float: right;">Default</ion-button>
       </ion-card>
 
       <ion-card>
@@ -30,7 +30,7 @@
           Keep close to Nature's heart... and break clear away, once in awhile,
           and climb a mountain or spend a week in the woods. Wash your spirit clean.
         </ion-card-content>
-        <ion-button href="/artisan" size="small" style="float: right;">Default</ion-button>
+        <ion-button color="secondary" href="/artisan" size="small" style="float: right;">Default</ion-button>
       </ion-card>
 
       <ion-card>
@@ -42,7 +42,7 @@
           Keep close to Nature's heart... and break clear away, once in awhile,
           and climb a mountain or spend a week in the woods. Wash your spirit clean.
         </ion-card-content>
-        <ion-button href="/artisan" size="small" style="float: right;">Default</ion-button>
+        <ion-button color="secondary" href="/artisan" size="small" style="float: right;">Default</ion-button>
       </ion-card>
 
        <ion-footer class="Footer"></ion-footer>
@@ -93,4 +93,9 @@ ion-title {
   font-weight: 700;
   font-family: 'Roboto', sans-serif!important;
 }
+
+ion-button {
+  background: #f8c09c;
+}
+
 </style>

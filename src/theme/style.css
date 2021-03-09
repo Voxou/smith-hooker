@@ -13,3 +13,30 @@ ion-toolbar {
 ion-content {
     --background: #e4d9d3;
 }
+
+ion-card {
+    background: #e4d9d3;   
+}
+
+ion-item {
+    --background: #e4d9d3;
+}
+
+.Text{
+    font-family: 'Linux Libertine';
+    src: url('/static/fonts/linux-libertine/LinLibertine_RB.woff') format('woff');
+    font-weight: bold;
+    font-style: normal;
+}
+
+
+ion-card-header {
+    font-family: 'Roboto', sans-serif;
+}
+
+.logo{
+    background-image: url("logo_en_noir.svg");
+    background-repeat: no-repeat;
+    background-position-y: top;
+    background-position-x: center;
+}

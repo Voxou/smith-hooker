@@ -3,6 +3,7 @@
     <ion-header>
       <ion-toolbar>
         <ion-title>Nos Artisans</ion-title>
+        
       </ion-toolbar>
     </ion-header>
     <ion-content :scroll-events="true" ref="content">
