@@ -31,13 +31,13 @@
         <ion-button size="small" style="float: right;">Default</ion-button>
       </ion-card>    
 
-      <ion-fab vertical="bottom" horizontal="end" slot="fixed">
-      <ion-fab-button color="light" @click="scroll">
-        <ion-icon :icon="chevronUpOutline"></ion-icon>
-      </ion-fab-button>
-    </ion-fab>
-
-    <ion-footer class="Footer"></ion-footer>
+       <ion-footer class="Footer"></ion-footer>
+     
+      <ion-fab vertical="bottom" horizontal="end" slot="fixed" @click="scroll">
+        <ion-fab-button color="light">
+          <ion-icon :icon="chevronUpOutline"></ion-icon>
+        </ion-fab-button>
+      </ion-fab>
 
     </ion-content>
   </ion-page>

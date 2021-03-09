@@ -44,13 +44,12 @@
 
        <ion-footer class="Footer"></ion-footer>
      
-     <ion-fab vertical="bottom" horizontal="end" slot="fixed" @click="scroll">
-      <ion-fab-button color="light">
-        <ion-icon :icon="chevronUpOutline"></ion-icon>
-      </ion-fab-button>
-    </ion-fab>
+      <ion-fab vertical="bottom" horizontal="end" slot="fixed" @click="scroll">
+        <ion-fab-button color="light">
+          <ion-icon :icon="chevronUpOutline"></ion-icon>
+        </ion-fab-button>
+      </ion-fab>
       
-
     </ion-content>
   </ion-page>
 </template>
@@ -61,7 +60,7 @@ import { chevronUpOutline } from 'ionicons/icons';
 import { ref } from 'vue';
 
 export default  {
-  name: 'Tab2',
+  name: 'Tab3',
   components: { IonHeader, IonToolbar, IonTitle, IonContent, IonPage, IonCardTitle, IonCardHeader, IonCardContent, IonCard, IonFab, IonFabButton, IonIcon },
   setup() {
     const content = ref();
@@ -77,3 +76,10 @@ export default  {
   }
 }
 </script>
+
+<style scoped>
+ion-card{
+  background-color: brown;
+}
+
+</style>
