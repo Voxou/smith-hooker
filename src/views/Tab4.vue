@@ -68,10 +68,13 @@ export default  {
 
 <style scoped> 
 
-ion-label {font-size : 1.5em!important; }
-ion-icon {font-size : 5.5em;}
+ion-label {
+  font-size : 1.5em!important; 
+  }
 
-
+ion-icon {
+  font-size : 5.5em;
+  }
 
 
 </style>

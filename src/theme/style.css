@@ -5,3 +5,11 @@
 .Footer{
     margin-bottom: 70px;
 }
+
+ion-toolbar {
+    --background: #e4d9d3;
+}
+
+ion-content {
+    --background: #e4d9d3;
+}

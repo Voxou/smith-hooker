@@ -2,7 +2,7 @@
   <ion-page>
     <ion-header>
       <ion-toolbar>
-        <ion-title>Accueil</ion-title>
+        <ion-title class="titre">Accueil</ion-title>
       </ion-toolbar>
     </ion-header>
     <ion-content :scroll-events="true" ref="content">
@@ -79,3 +79,17 @@ export default  {
   }
 }
 </script>
+
+<style scoped> 
+@import url('https://fonts.googleapis.com/css2?family=Roboto&display=swap');
+
+ion-card {
+  font-family: 'Linux Libertine', sans-serif;
+  background-color: #EDD6B6;
+}
+
+
+ion-title {
+  font-family: 'Roboto', sans-serif!important;
+}
+</style>

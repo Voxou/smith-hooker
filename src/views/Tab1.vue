@@ -32,3 +32,4 @@ export default  {
   components: { IonHeader, IonToolbar, IonTitle, IonContent, IonPage, GMap }
 }
 </script>
+
