@@ -3,6 +3,10 @@ import { RouteRecordRaw } from 'vue-router';
 import Tabs from '../views/Tabs.vue';
 import Auth from '../views/Auth.vue';
 import Register from '../views/Register.vue';
+import Mybusiness from '../views/Mybusiness.vue';
+import Pictures from '../views/Pictures.vue';
+
+
 
 const routes: Array<RouteRecordRaw> = [
   {
@@ -46,6 +50,14 @@ const routes: Array<RouteRecordRaw> = [
   {
     path:'/register',
     component : Register
+  } ,
+  { 
+    path: '/Moncommerce',
+    component : Mybusiness
+  },
+  {
+    path: '/Photos',
+    component : Pictures
   }
 ]
 
