@@ -17,6 +17,7 @@
           Keep close to Nature's heart... and break clear away, once in awhile,
           and climb a mountain or spend a week in the woods. Wash your spirit clean.
         </ion-card-content>
+        <ion-button href="/artisan" size="small" style="float: right;">Default</ion-button>
       </ion-card>
 
       <ion-card>
@@ -29,6 +30,7 @@
           Keep close to Nature's heart... and break clear away, once in awhile,
           and climb a mountain or spend a week in the woods. Wash your spirit clean.
         </ion-card-content>
+        <ion-button href="/artisan" size="small" style="float: right;">Default</ion-button>
       </ion-card>
 
       <ion-card>
@@ -40,17 +42,17 @@
           Keep close to Nature's heart... and break clear away, once in awhile,
           and climb a mountain or spend a week in the woods. Wash your spirit clean.
         </ion-card-content>
+        <ion-button href="/artisan" size="small" style="float: right;">Default</ion-button>
       </ion-card>
 
        <ion-footer class="Footer"></ion-footer>
      
-     <ion-fab vertical="bottom" horizontal="end" slot="fixed" @click="scroll">
-      <ion-fab-button color="light">
-        <ion-icon :icon="chevronUpOutline"></ion-icon>
-      </ion-fab-button>
-    </ion-fab>
+      <ion-fab vertical="bottom" horizontal="end" slot="fixed" @click="scroll">
+        <ion-fab-button color="light">
+          <ion-icon :icon="chevronUpOutline"></ion-icon>
+        </ion-fab-button>
+      </ion-fab>
       
-
     </ion-content>
   </ion-page>
 </template>
@@ -61,7 +63,7 @@ import { chevronUpOutline } from 'ionicons/icons';
 import { ref } from 'vue';
 
 export default  {
-  name: 'Tab2',
+  name: 'Tab3',
   components: { IonHeader, IonToolbar, IonTitle, IonContent, IonPage, IonCardTitle, IonCardHeader, IonCardContent, IonCard, IonFab, IonFabButton, IonIcon },
   setup() {
     const content = ref();
@@ -78,7 +80,6 @@ export default  {
 }
 </script>
 
-
 <style scoped> 
 @import url('https://fonts.googleapis.com/css2?family=Roboto&display=swap');
 
@@ -91,6 +92,4 @@ ion-card {
 ion-title {
   font-family: 'Roboto', sans-serif!important;
 }
-
-
 </style>

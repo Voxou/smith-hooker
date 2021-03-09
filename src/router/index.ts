@@ -3,10 +3,10 @@ import { RouteRecordRaw } from 'vue-router';
 import Tabs from '../views/Tabs.vue';
 import Auth from '../views/Auth.vue';
 import Register from '../views/Register.vue';
+import newpublication from '../views/newpublication.vue';
+import Artisan from '../views/Artisan.vue';
 import Mybusiness from '../views/Mybusiness.vue';
 import Pictures from '../views/Pictures.vue';
-
-
 
 const routes: Array<RouteRecordRaw> = [
   {
@@ -50,6 +50,14 @@ const routes: Array<RouteRecordRaw> = [
   {
     path:'/register',
     component : Register
+  },
+  {
+    path: '/NouvellePublication',
+    component : newpublication
+  }, 
+  {
+    path:'/artisan',
+    component : Artisan
   } ,
   { 
     path: '/Moncommerce',
