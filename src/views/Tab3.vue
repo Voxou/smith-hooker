@@ -77,3 +77,10 @@ export default  {
   }
 }
 </script>
+
+<style scoped>
+ion-card{
+  background-color: brown;
+}
+
+</style>
