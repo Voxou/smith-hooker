@@ -12,7 +12,7 @@
 
       <ion-icon :icon="personOutline"></ion-icon>
 
-      <ion-col align-self-center="" size-md="6" size-lg="5" size-xs="12" class="md hydrated" style="flex: 0 0 calc(calc(12 / var(--ion-grid-columns, 12)) * 100%); width: calc(calc(12 / var(--ion-grid-columns, 12)) * 100%); max-width: calc(calc(12 / var(--ion-grid-columns, 12)) * 100%);">
+      <ion-col>
       
       <ion-item class="item-interactive item-input item-has-placeholder item md ion-focusable hydrated">
          <ion-label position="stacked">Nom</ion-label>
@@ -26,11 +26,13 @@
         <input class="native-input sc-ion-input-md" aria-labelledby="ion-input-1-lbl" autocapitalize="off" autocomplete="off" autocorrect="off" name="prenom" placeholder="Prénom" required spellcheck="false" type="text"></ion-input>
       </ion-item>
 
+
       <ion-item class="item-interactive item-input item-has-placeholder item md ion-focusable hydrated">
         <ion-label position="stacked" >Adresse Mail</ion-label>
         <ion-input class="sc-ion-input-md-h sc-ion-input-md-s md hydrated">
         <input class="native-input sc-ion-input-md" aria-labelledby="ion-input-2-lbl" autocapitalize="off" autocomplete="off" autocorrect="off" name="email" placeholder="Adresse Mail" required spellcheck="false" type="email"></ion-input>
       </ion-item>
+
 
       <ion-item class="item-interactive item-input item-has-placeholder item md ion-focusable hydrated">
         <ion-label position="stacked" >Mot de Passe</ion-label>
