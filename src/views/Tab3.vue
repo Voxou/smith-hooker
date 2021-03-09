@@ -17,6 +17,7 @@
           Keep close to Nature's heart... and break clear away, once in awhile,
           and climb a mountain or spend a week in the woods. Wash your spirit clean.
         </ion-card-content>
+        <ion-button href="/artisan" size="small" style="float: right;">Default</ion-button>
       </ion-card>
 
       <ion-card>
@@ -29,6 +30,7 @@
           Keep close to Nature's heart... and break clear away, once in awhile,
           and climb a mountain or spend a week in the woods. Wash your spirit clean.
         </ion-card-content>
+        <ion-button href="/artisan" size="small" style="float: right;">Default</ion-button>
       </ion-card>
 
       <ion-card>
@@ -40,6 +42,7 @@
           Keep close to Nature's heart... and break clear away, once in awhile,
           and climb a mountain or spend a week in the woods. Wash your spirit clean.
         </ion-card-content>
+        <ion-button href="/artisan" size="small" style="float: right;">Default</ion-button>
       </ion-card>
 
        <ion-footer class="Footer"></ion-footer>
@@ -76,10 +79,3 @@ export default  {
   }
 }
 </script>
-
-<style scoped>
-ion-card{
-  background-color: brown;
-}
-
-</style>

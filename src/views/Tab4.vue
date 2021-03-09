@@ -40,7 +40,7 @@
         <input class="native-input sc-ion-input-md" aria-labelledby="ion-input-3-lbl" autocapitalize="off" autocomplete="off" autocorrect="off" name="password" placeholder="Mot de Passe" required spellcheck="false" type="password" aria-autocomplete="list"></ion-input>
       </ion-item>
 
-      <ion-button class="md button button-block button-large button-solid ion-activatable ion-focusable hydrated" expand="block" size="large"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">S'enregistrer</font></font></ion-button>
+      <ion-button class="md button button-block button-large button-solid ion-activatable ion-focusable hydrated" expand="block" size="large"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">Enregistrer</font></font></ion-button>
       </ion-col>
 
     </ion-content>
