@@ -4,6 +4,7 @@ import Tabs from '../views/Tabs.vue';
 import Auth from '../views/Auth.vue';
 import Register from '../views/Register.vue';
 import newpublication from '../views/newpublication.vue';
+import Artisan from '../views/Artisan.vue';
 
 const routes: Array<RouteRecordRaw> = [
   {
@@ -47,10 +48,17 @@ const routes: Array<RouteRecordRaw> = [
   {
     path:'/register',
     component : Register
+
   },
   {
     path: '/NouvellePublication',
     component : newpublication
+
+  }, 
+  {
+    path:'/artisan',
+    component : Artisan
+
   }
 ]
 
