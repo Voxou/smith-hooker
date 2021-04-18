@@ -135,3 +135,11 @@ a {
     --color: black;
     --background: #f8c09c;
 }
+
+ion-toggle {
+    --background: #fff;
+    --background-checked: #f8c09c;
+  
+    --handle-background: #f8c09c;
+    --handle-background-checked: #fff;
+  }

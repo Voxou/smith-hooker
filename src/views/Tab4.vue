@@ -6,56 +6,44 @@
       </ion-toolbar>
     </ion-header>
     <ion-content class="ion-text-center" :fullscreen="true">
-      
+      <div class="h-100 os-flex flex-column justify-content-around align-items-center">
+          <form class="" style="height: 80%">
+              <ion-grid class="h-100">
+                  <ion-row class="h-100" color="primary" justify-content-center>
+                      <ion-col class="h-100 os-flex flex-column justify-content-around" align-self-center size-md="6" size-lg="5" size-xs="12">
+                      <div padding class="os-flex flex-column justify-content-between align-items-center">
+                        <ion-icon style="margin-bottom: 10%;" :icon="personOutline"></ion-icon>
+                        <div class="mb-1 os-flex flex-column justify-content-center">
+                            <ion-label>Nom et prénom</ion-label>
+                            <ion-input name="name" placeholder="Jean Sérien" type="text" required></ion-input>
+                        </div>
+                        <div class="mb-1 os-flex flex-column justify-content-center">
+                            <ion-label>Adresse Mail</ion-label>
+                            <ion-input name="email" placeholder="jean.serien@gmail.com" type="email" required></ion-input>
+                        </div>
+                      </div>
+                      <div padding>
+                        <ion-button  size="large" type="submit" expand="block">Enregistrer</ion-button>
+                      </div>
 
-      <ion-title class="ion-margin" size="large">Informations mon compte</ion-title>
-
-      <ion-icon :icon="personOutline"></ion-icon>
-
-      <ion-col>
-      
-      <ion-item class="item-interactive item-input item-has-placeholder item md ion-focusable hydrated">
-         <ion-label position="stacked">Nom</ion-label>
-         <ion-input class="sc-ion-input-md-h sc-ion-input-md-s md hydrated">
-         <input class="native-input sc-ion-input-md" aria-labelledby="ion-input-0-lbl" autocapitalize="off" autocomplete="off" autocorrect="off" name="name" placeholder="Nom" required spellcheck="false" type="text" size="small"></ion-input>
-       </ion-item>
-
-      <ion-item class="item-interactive item-input item-has-placeholder item md ion-focusable hydrated">
-        <ion-label position="stacked" >Prénom</ion-label>
-        <ion-input class="sc-ion-input-md-h sc-ion-input-md-s md hydrated">
-        <input class="native-input sc-ion-input-md" aria-labelledby="ion-input-1-lbl" autocapitalize="off" autocomplete="off" autocorrect="off" name="prenom" placeholder="Prénom" required spellcheck="false" type="text"></ion-input>
-      </ion-item>
-
-
-      <ion-item class="item-interactive item-input item-has-placeholder item md ion-focusable hydrated">
-        <ion-label position="stacked" >Adresse Mail</ion-label>
-        <ion-input class="sc-ion-input-md-h sc-ion-input-md-s md hydrated">
-        <input class="native-input sc-ion-input-md" aria-labelledby="ion-input-2-lbl" autocapitalize="off" autocomplete="off" autocorrect="off" name="email" placeholder="Adresse Mail" required spellcheck="false" type="email"></ion-input>
-      </ion-item>
-
-
-      <ion-item class="item-interactive item-input item-has-placeholder item md ion-focusable hydrated">
-        <ion-label position="stacked" >Mot de Passe</ion-label>
-        <ion-input class="sc-ion-input-md-h sc-ion-input-md-s md hydrated">
-        <input class="native-input sc-ion-input-md" aria-labelledby="ion-input-3-lbl" autocapitalize="off" autocomplete="off" autocorrect="off" name="password" placeholder="Mot de Passe" required spellcheck="false" type="password" aria-autocomplete="list"></ion-input>
-      </ion-item>
-
-      <ion-button class="md button button-block button-large button-solid ion-activatable ion-focusable hydrated" expand="block" size="large"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">Enregistrer</font></font></ion-button>
-      </ion-col>
-
+                      </ion-col>
+                  </ion-row>
+              </ion-grid>
+          </form>
+      </div>
     </ion-content>
   </ion-page>
 </template>
 
 <script lang="ts">
-import { IonPage, IonHeader, IonToolbar, IonTitle, IonContent, IonItem, IonLabel, IonInput, IonCol, IonIcon,} from '@ionic/vue';
+import { IonPage, IonHeader, IonToolbar, IonTitle, IonContent, IonLabel, IonInput, IonCol, IonIcon,} from '@ionic/vue';
 import { personOutline} from 'ionicons/icons';
 
 
 
 export default  {
   name: 'Tab4',
-  components: {  IonHeader, IonToolbar, IonTitle, IonContent, IonPage, IonItem,  IonLabel, IonInput, IonCol, IonIcon},
+  components: {  IonHeader, IonToolbar, IonTitle, IonContent, IonPage,  IonLabel, IonInput, IonCol, IonIcon},
   setup() {
     return {
       personOutline
@@ -69,7 +57,7 @@ export default  {
 <style scoped> 
 
 ion-label {
-  font-size : 1.5em!important; 
+  font-size : 1.1em!important; 
   }
 
 ion-icon {
