@@ -41,15 +41,27 @@ ion-card-header {
 }
 
 .logo{
-    background-image: url("logo_en_noir.svg");
-    background-repeat: no-repeat;
-    background-position-y: top;
-    background-position-x: center;
+    position: absolute;
+    margin-left: auto;
+    margin-right: auto;
+    /* left: 0; */
+    right: 10px;
+    top: 0;
+    text-align: center;
+    width: 160px;
 }
 
 ion-title {
     font-family: 'Roboto', sans-serif;
     font-weight: 400;
+}
+
+.os-relative {
+    position: relative;
+}
+
+.os-absolute {
+    position: absolute;
 }
 
 .os-flex {
@@ -99,11 +111,15 @@ ion-input {
 }
 
 ion-button {
-    background-color: transparent;
+    background-color: transparent!important;
     color: black;
     border: 2px solid black;
     font-family: 'Linux Libertine';
     font-size: 1.1em;
+}
+
+ion-card-content{
+    color: black;
 }
 
 ion-label {
@@ -113,4 +129,9 @@ ion-label {
 a {
     color: black;
     font-family: 'Linux Libertine';
+}
+
+.myButton {
+    --color: black;
+    --background: #f8c09c;
 }

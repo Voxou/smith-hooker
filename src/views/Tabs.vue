@@ -12,11 +12,6 @@
         
         <ion-tab-button tab="tab3"></ion-tab-button>
 
-        <!-- <ion-tab-button tab="tab3" href="/tabs/tab3">
-          <ion-icon :icon="homeOutline" />
-          <ion-label>Accueil</ion-label>
-        </ion-tab-button> -->
-
         <ion-tab-button tab="tab4" href="/tabs/tab4">
           <ion-icon :icon="personOutline" />
         </ion-tab-button>

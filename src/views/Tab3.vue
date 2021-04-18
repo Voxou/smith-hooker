@@ -1,8 +1,9 @@
 <template>
   <ion-page>
     <ion-header>
-      <ion-toolbar>
-        <ion-title class="logo">Accueil</ion-title>         
+      <ion-toolbar class="os-relative">
+        <ion-title>Accueil</ion-title>        
+         <ion-img class="logo" :src="logo"></ion-img>
       </ion-toolbar>
     </ion-header>
     <ion-content :scroll-events="true" ref="content">
@@ -17,7 +18,7 @@
           Keep close to Nature's heart... and break clear away, once in awhile,
           and climb a mountain or spend a week in the woods. Wash your spirit clean.
         </ion-card-content>
-        <ion-button color="secondary" href="/artisan" size="small" style="float: right;">Default</ion-button>
+        <ion-button class="myButton" href="/artisan" size="small" style="float: right;">Voir plus</ion-button>
       </ion-card>
 
       <ion-card>
@@ -30,7 +31,7 @@
           Keep close to Nature's heart... and break clear away, once in awhile,
           and climb a mountain or spend a week in the woods. Wash your spirit clean.
         </ion-card-content>
-        <ion-button color="secondary" href="/artisan" size="small" style="float: right;">Default</ion-button>
+        <ion-button class="myButton" href="/artisan" size="small" style="float: right;">Voir plus</ion-button>
       </ion-card>
 
       <ion-card>
@@ -42,7 +43,7 @@
           Keep close to Nature's heart... and break clear away, once in awhile,
           and climb a mountain or spend a week in the woods. Wash your spirit clean.
         </ion-card-content>
-        <ion-button color="secondary" href="/artisan" size="small" style="float: right;">Default</ion-button>
+        <ion-button class="myButton" href="/artisan" size="small" style="float: right;">Voir plus</ion-button>
       </ion-card>
 
        <ion-footer class="Footer"></ion-footer>
@@ -58,20 +59,22 @@
 </template>
 
 <script lang="ts">
-import { IonPage, IonHeader, IonToolbar, IonTitle, IonContent, IonCardTitle, IonCardHeader, IonCardContent, IonCard, IonFab, IonFabButton, IonIcon } from '@ionic/vue';
+import { IonPage, IonHeader, IonToolbar, IonTitle, IonContent, IonCardTitle, IonCardHeader, IonCardContent, IonCard, IonFab, IonFabButton, IonIcon, IonImg } from '@ionic/vue';
 import { chevronUpOutline } from 'ionicons/icons';
-import { ref } from 'vue';
+import { ref, computed } from 'vue';
 
 export default  {
   name: 'Tab3',
-  components: { IonHeader, IonToolbar, IonTitle, IonContent, IonPage, IonCardTitle, IonCardHeader, IonCardContent, IonCard, IonFab, IonFabButton, IonIcon },
+  components: { IonHeader, IonToolbar, IonTitle, IonContent, IonPage, IonCardTitle, IonCardHeader, IonCardContent, IonCard, IonFab, IonFabButton, IonIcon, IonImg },
   setup() {
+    const logo = computed(()=> require('../../public/assets/images/logo_en_noir.svg'))
     const content = ref();
     const scroll = async () => {
       await  content.value.$el.scrollToTop()
       //debugger;
     };
     return{
+      logo,
       chevronUpOutline, 
       scroll,
       content
