@@ -2,58 +2,46 @@
     <ion-page>
         <ion-header>
         <ion-toolbar>
-            <ion-title>Authentification</ion-title>
+            <ion-title>Connexion</ion-title>
         </ion-toolbar>
         </ion-header>
         <ion-content :fullscreen="true">
-            <form>
-                <ion-grid>
-                    <ion-row color="primary" justify-content-center>
-                        <ion-col align-self-center size-md="6" size-lg="5" size-xs="12">
-                            <div text-center>
-                                <h3>Se connecter</h3>
-                            </div>
-                            <div padding>
-                                <ion-item>
-                                    <ion-input name="email" placeholder="Adresse mail" type="email"></ion-input>
-                                </ion-item>
-                                <ion-item>
-                                    <ion-input name="password" placeholder="Mot de passe" type="password"></ion-input>
-                                </ion-item>
-                            </div>
-                            <div padding>
-                                <ion-button  size="large" type="submit" expand="block">Connexion</ion-button>
-                            </div>
-                        </ion-col>
-                    </ion-row>
-                </ion-grid>
-            </form>
-            <ion-item>
-                <a href="/register">Je n'ai pas de compte, j'en créé un</a>
-            </ion-item>
-            <!-- <ion-card>
-                <ion-card-header>
-                    <ion-card-title>Se connecter</ion-card-title>
-                </ion-card-header>
-                <ion-card-content>
-                    <ion-input placeholder="Votre e-mail" type="email"></ion-input>
-                    <ion-input placeholder="Votre mot de passe" type="password"></ion-input>
-                    <ion-button>Connexion</ion-button>
-                    <a href="#">J'ai oublié mon mot de passe</a>
-                    <a href="#">Je n'ai pas de compte, j'en créé un</a>
-                </ion-card-content>
-            </ion-card> -->
+            <div class="h-100 os-flex flex-column justify-content-around align-items-center">
+                <form class="" style="height: 80%">
+                    <ion-grid class="h-100">
+                        <ion-row class="h-100" color="primary" justify-content-center>
+                            <ion-col class="h-100 os-flex flex-column justify-content-around" align-self-center size-md="6" size-lg="5" size-xs="12">
+                                <div padding  class="os-flex flex-column justify-content-between">
+                                    <div class="mb-1 os-flex flex-column justify-content-center">
+                                        <ion-label>Login</ion-label>
+                                        <ion-input name="email" placeholder="Adresse mail" type="email"></ion-input>
+                                    </div>
+
+                                    <div class="mb-1 os-flex flex-column justify-content-center">
+                                        <ion-label>Mot de passe</ion-label>
+                                        <ion-input name="password" placeholder="Mot de passe" type="password"></ion-input>
+                                    </div>
+                                </div>
+                                <div padding>
+                                    <ion-button  size="large" type="submit" expand="block">Connexion</ion-button>
+                                    <a href="/register">Je n'ai pas de compte, j'en créé un</a>
+                                </div>
+                            </ion-col>
+                        </ion-row>
+                    </ion-grid>
+                </form>
+            </div>
         </ion-content>
         
     </ion-page>
 </template>
 
 <script>
-import { IonPage, IonHeader, IonToolbar, IonTitle, IonContent, IonButton, IonInput, IonGrid, IonItem, IonRow } from '@ionic/vue';
+import { IonPage, IonHeader, IonToolbar, IonTitle, IonContent, IonButton, IonInput, IonGrid, IonRow, IonLabel } from '@ionic/vue';
 import { defineComponent } from 'vue';
 
 export default defineComponent({
-    components: { IonPage, IonHeader, IonToolbar, IonTitle, IonContent, IonButton, IonInput, IonGrid, IonItem, IonRow }
+    components: { IonPage, IonHeader, IonToolbar, IonTitle, IonContent, IonButton, IonInput, IonGrid, IonRow, IonLabel }
 });
 </script>
 
