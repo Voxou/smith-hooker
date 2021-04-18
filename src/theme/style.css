@@ -1,4 +1,8 @@
 @import url('https://fonts.googleapis.com/css2?family=Roboto:wght@100;400;700&display=swap');
+@font-face {
+    font-family: 'Linux Libertine';
+    src: url('../assets/fonts/LinLibertine_R.ttf')
+}
 
 .Text{
     text-align:justify;
@@ -46,4 +50,67 @@ ion-card-header {
 ion-title {
     font-family: 'Roboto', sans-serif;
     font-weight: 400;
+}
+
+.os-flex {
+    display: flex;
+}
+
+.flex-column {
+    flex-direction: column;
+}
+
+.justify-content-center{
+    justify-content: center;
+}
+
+.justify-content-between{
+    justify-content: space-between;
+}
+
+.justify-content-around{
+    justify-content: space-around;
+}
+
+.align-items-center {
+    align-items: center;
+}
+
+.flex-grow{
+    flex-grow: 1;
+}
+
+.w-100 {
+    width: 100%;
+}
+
+.mb-1 {
+    margin-bottom: 1rem;
+}
+
+.h-100 {
+    height: 100%;
+}
+
+ion-input {
+    background-color: transparent;
+    border: 2px solid black;
+    font-family: 'Linux Libertine';
+}
+
+ion-button {
+    background-color: transparent;
+    color: black;
+    border: 2px solid black;
+    font-family: 'Linux Libertine';
+    font-size: 1.1em;
+}
+
+ion-label {
+    font-family: 'Linux Libertine';
+}
+
+a {
+    color: black;
+    font-family: 'Linux Libertine';
 }
