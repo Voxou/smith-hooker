@@ -17,7 +17,7 @@
           Keep close to Nature's heart... and break clear away, once in awhile,
           and climb a mountain or spend a week in the woods. Wash your spirit clean.
         </ion-card-content>
-        <ion-button class="myButton" href="/artisan" size="small" style="float: right;">Voir plus</ion-button>
+        <ion-button class="myButton" href="/smith" size="small" style="float: right;">Voir plus</ion-button>
       </ion-card>
 
       <ion-card>
@@ -29,7 +29,7 @@
           Keep close to Nature's heart... and break clear away, once in awhile,
           and climb a mountain or spend a week in the woods. Wash your spirit clean.
         </ion-card-content>
-        <ion-button class="myButton" href="/artisan" size="small" style="float: right;">Voir plus</ion-button>
+        <ion-button class="myButton" href="/smith" size="small" style="float: right;">Voir plus</ion-button>
       </ion-card>    
 
        <ion-footer class="Footer"></ion-footer>

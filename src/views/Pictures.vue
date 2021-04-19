@@ -5,18 +5,15 @@
         <ion-title>Photos</ion-title>
       </ion-toolbar>
     </ion-header>
-    <ion-content class="ion-text-cente" :fullscreen="true">
-
-        
-
-        <h1 class="ion-margin" size="large">Photos</h1>
-
-
-
-        <ion-item class="telecharger">
-            <label for="avatar">Télécharger sa photo:  </label>
-                <input type="file" id="avatar" name="avatar" accept="image/png, image/jpeg">
-        </ion-item>
+    <ion-content class="ion-padding" :fullscreen="true">
+        <ion-button @click="setOpen(true)" class="myButton2" size="small">+ajouter des photos</ion-button>
+        <ion-modal
+            :is-open="isOpenRef"
+            css-class="my-custom-class"
+            @onDidDismiss="setOpen(false)"
+        >
+            <ModalPictures :data="data"></ModalPictures>
+        </ion-modal>
 
 
        
@@ -25,23 +22,17 @@
 
 
             <ion-col>
-                <ion-item>
                     <img src="https://images.unsplash.com/photo-1517433670267-08bbd4be890f?ixid=MXwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHw%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=972&q=80" alt="" />
-                </ion-item>
             </ion-col>
 
 
             <ion-col>
-                <ion-item>
                     <img src="https://images.unsplash.com/photo-1517433670267-08bbd4be890f?ixid=MXwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHw%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=972&q=80" alt="" />
-              </ion-item>
             </ion-col>
 
 
             <ion-col>
-                <ion-item>
                     <img src="https://images.unsplash.com/photo-1517433670267-08bbd4be890f?ixid=MXwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHw%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=972&q=80" alt="" />
-                </ion-item>
             </ion-col>
 
 
@@ -54,23 +45,17 @@
 
 
             <ion-col>
-                <ion-item>
                     <img src="https://images.unsplash.com/photo-1565349173908-1cf6bc9fd4ee?ixid=MXwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHw%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=1050&q=80" alt=""/>
-                </ion-item>
             </ion-col>
 
 
             <ion-col>
-                <ion-item>
                     <img src="https://images.unsplash.com/photo-1565349173908-1cf6bc9fd4ee?ixid=MXwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHw%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=1050&q=80" alt=""/>
-              </ion-item>
             </ion-col>
 
 
             <ion-col>
-                <ion-item>
                     <img src="https://images.unsplash.com/photo-1565349173908-1cf6bc9fd4ee?ixid=MXwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHw%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=1050&q=80" alt=""/>
-                </ion-item>
             </ion-col>
 
 
@@ -85,14 +70,21 @@
 
 
 <script lang="ts">
-import {IonPage, IonHeader, IonToolbar, IonTitle, IonContent, IonItem, IonRow,  } from '@ionic/vue';
-
+import {IonPage, IonHeader, IonToolbar, IonTitle, IonContent, IonRow, IonModal,  } from '@ionic/vue';
+import { ref } from 'vue';
+import ModalPictures from '../components/ModalPictures.vue';
 
 
 
 export default {
     name : 'Pictures',
-    components: {IonPage, IonHeader, IonToolbar, IonTitle, IonContent, IonItem, IonRow,  }
+    components: {IonPage, IonHeader, IonToolbar, IonTitle, IonContent, IonRow, ModalPictures, IonModal },
+    setup() {
+    const isOpenRef = ref(false);
+    const setOpen = (state: boolean) => isOpenRef.value = state;
+    const data = { content: 'New Content' };
+    return { isOpenRef, setOpen, data }
+  }
 }
 
 </script>
@@ -100,7 +92,6 @@ export default {
 
 
 <style scoped> 
-
 img {
     width: 400px;
 }
@@ -108,7 +99,4 @@ img {
 .telecharger {
     margin-bottom: 40px;
 }
-
-
-
 </style>

@@ -1,8 +1,9 @@
 <template>
     <ion-page>
         <ion-header>
-        <ion-toolbar>
+        <ion-toolbar class="os-relative">
             <ion-title>Connexion</ion-title>
+            <ion-img class="logo" :src="logo"></ion-img>
         </ion-toolbar>
         </ion-header>
         <ion-content :fullscreen="true">
@@ -14,12 +15,12 @@
                                 <div padding  class="os-flex flex-column justify-content-between">
                                     <div class="mb-1 os-flex flex-column justify-content-center">
                                         <ion-label>Login</ion-label>
-                                        <ion-input name="email" placeholder="Adresse mail" type="email"></ion-input>
+                                        <ion-input name="email" placeholder="Adresse mail" type="email" required></ion-input>
                                     </div>
 
                                     <div class="mb-1 os-flex flex-column justify-content-center">
                                         <ion-label>Mot de passe</ion-label>
-                                        <ion-input name="password" placeholder="Mot de passe" type="password"></ion-input>
+                                        <ion-input name="password" placeholder="Mot de passe" type="password" required></ion-input>
                                     </div>
                                 </div>
                                 <div padding>
@@ -38,10 +39,16 @@
 
 <script>
 import { IonPage, IonHeader, IonToolbar, IonTitle, IonContent, IonButton, IonInput, IonGrid, IonRow, IonLabel } from '@ionic/vue';
-import { defineComponent } from 'vue';
+import { defineComponent, computed } from 'vue';
 
 export default defineComponent({
-    components: { IonPage, IonHeader, IonToolbar, IonTitle, IonContent, IonButton, IonInput, IonGrid, IonRow, IonLabel }
+    components: { IonPage, IonHeader, IonToolbar, IonTitle, IonContent, IonButton, IonInput, IonGrid, IonRow, IonLabel },
+    setup() {
+    const logo = computed(()=> require('../../public/assets/images/logo_en_noir.svg'));
+    return{
+      logo
+    }
+  }
 });
 </script>
 

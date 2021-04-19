@@ -4,10 +4,6 @@
     src: url('../assets/fonts/LinLibertine_R.ttf')
 }
 
-.Text{
-    text-align:justify;
-}
-
 .Footer{
     margin-bottom: 70px;
 }
@@ -21,7 +17,11 @@ ion-content {
 }
 
 ion-card {
-    background: #e4d9d3;   
+    background: #f8c09c;   
+}
+
+ion-card.simple {
+    background: #e4d9d3;
 }
 
 ion-item {
@@ -29,15 +29,12 @@ ion-item {
 }
 
 .Text{
-    font-family: 'Linux Libertine';
-    src: url('/static/fonts/linux-libertine/LinLibertine_RB.woff') format('woff');
-    font-weight: bold;
-    font-style: normal;
+    font-family: 'Roboto', sans-serif;
 }
 
 
-ion-card-header {
-    font-family: 'Roboto', sans-serif;
+ion-card-header, ion-card-title {
+    font-family: 'Linux Libertine';
 }
 
 .logo{
@@ -104,7 +101,7 @@ ion-title {
     height: 100%;
 }
 
-ion-input {
+ion-input, ion-textarea, ion-datetime, ion-select {
     background-color: transparent;
     border: 2px solid black;
     font-family: 'Linux Libertine';
@@ -134,6 +131,15 @@ a {
 .myButton {
     --color: black;
     --background: #f8c09c;
+}
+
+.myButton2 {
+    margin-top: auto;
+    margin-bottom: auto;
+    top: 0;
+    bottom: 0;
+    right: 0;
+    --color: black;
 }
 
 ion-toggle {

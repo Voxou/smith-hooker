@@ -3,15 +3,17 @@ import { RouteRecordRaw } from 'vue-router';
 import Tabs from '../views/Tabs.vue';
 import Auth from '../views/Auth.vue';
 import Register from '../views/Register.vue';
-import newpublication from '../views/newpublication.vue';
-import Artisan from '../views/Artisan.vue';
-import Mybusiness from '../views/Mybusiness.vue';
+import NewPost from '../views/NewPost.vue';
+import Smith from '../views/Smith.vue';
+import SmithBusiness from '../views/SmithBusiness.vue';
 import Pictures from '../views/Pictures.vue';
+import SmithPosts from '../views/SmithPosts.vue';
+import Post from '../views/Post.vue';
 
 const routes: Array<RouteRecordRaw> = [
   {
     path: '/',
-    redirect: '/tabs/tab1'
+    redirect: '/tabs/tab3'
   },
   {
     path: '/tabs/',
@@ -19,7 +21,7 @@ const routes: Array<RouteRecordRaw> = [
     children: [
       {
         path: '',
-        redirect: 'tab1'
+        redirect: 'tab3'
       },
       {
         path: 'tab1',
@@ -44,7 +46,7 @@ const routes: Array<RouteRecordRaw> = [
     ]
   },
   {
-    path:'/auth/',
+    path:'/auth',
     component: Auth,
   },
   {
@@ -52,21 +54,30 @@ const routes: Array<RouteRecordRaw> = [
     component : Register
   },
   {
-    path: '/NouvellePublication',
-    component : newpublication
-  }, 
-  {
-    path:'/artisan',
-    component : Artisan
-  } ,
-  { 
-    path: '/Moncommerce',
-    component : Mybusiness
+    path:'/smith',
+    component : Smith
   },
   {
-    path: '/Photos',
+    path:'/smith/posts',
+    component : SmithPosts
+  },
+  {
+    path:'/smith/posts/post',
+    component : Post
+  },
+  {
+    path:'/smith/posts/newPost',
+    component : NewPost
+  },
+  {
+    path:'/smith/business',
+    component : SmithBusiness
+  },
+  {
+    path:'/smith/business/pictures',
     component : Pictures
   }
+  
 ]
 
 const router = createRouter({

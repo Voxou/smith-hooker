@@ -1,8 +1,9 @@
 <template>
   <ion-page>
     <ion-header>
-      <ion-toolbar>
+      <ion-toolbar class="os-relative">
         <ion-title>Créer un compte</ion-title>
+          <ion-img class="logo" :src="logo"></ion-img>
       </ion-toolbar>
     </ion-header>
     <ion-content :fullscreen="true">
@@ -57,9 +58,16 @@ ion-button{
 </style>
 <script lang="ts">
 import { IonPage, IonHeader, IonToolbar, IonTitle, IonContent, IonButton, IonInput, IonGrid, IonRow } from '@ionic/vue';
+import { computed } from 'vue';
 
 export default  {
   name: 'Register',
-  components: { IonHeader, IonToolbar, IonTitle, IonContent, IonPage, IonButton, IonInput, IonGrid, IonRow }
+  components: { IonHeader, IonToolbar, IonTitle, IonContent, IonPage, IonButton, IonInput, IonGrid, IonRow },
+  setup() {
+    const logo = computed(()=> require('../../public/assets/images/logo_en_noir.svg'));
+    return{
+      logo
+    }
+  }
 }
 </script>       
