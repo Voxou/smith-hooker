@@ -128,13 +128,13 @@
 </template>
 
 <script lang="ts">
-import { IonPage, IonHeader, IonToolbar, IonTitle, IonCard, IonCardContent, IonCardTitle, IonCol, IonGrid, IonRow, IonFab, IonFabButton, IonIcon, IonContent } from '@ionic/vue';
+import { IonPage, IonHeader, IonToolbar, IonTitle, IonCard, IonCardContent, IonCardTitle, IonCol, IonGrid, IonRow, IonFab, IonFabButton, IonIcon, IonContent, IonToggle, IonFooter, IonCardHeader } from '@ionic/vue';
 import { chevronUpOutline } from 'ionicons/icons';
 import { ref } from 'vue';
 
 export default  {
   name: 'Tab5',
-  components: { IonHeader, IonToolbar, IonTitle, IonPage, IonCard, IonCardContent, IonCardTitle, IonCol, IonGrid, IonRow, IonFab, IonFabButton, IonIcon, IonContent },
+  components: { IonHeader, IonToolbar, IonTitle, IonPage, IonCard, IonCardContent, IonCardTitle, IonCol, IonGrid, IonRow, IonFab, IonFabButton, IonIcon, IonContent, IonToggle, IonFooter, IonCardHeader },
   setup() {
     const content = ref();
     const scroll = async () => {
