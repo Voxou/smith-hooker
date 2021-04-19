@@ -5,7 +5,7 @@
         <ion-title>Mes notifications</ion-title>
       </ion-toolbar>
     </ion-header>
-    <ion-content :fullscreen="true">
+    <ion-content :fullscreen="true"  :scroll-events="true" ref="content">
       <ion-header collapse="condense">
       </ion-header>
 
@@ -115,22 +115,36 @@
         </ion-card>
 
         <ion-footer class="Footer"></ion-footer>
+     
+      <ion-fab vertical="bottom" horizontal="end" slot="fixed" @click="scroll">
+        <ion-fab-button color="light">
+          <ion-icon :icon="chevronUpOutline"></ion-icon>
+        </ion-fab-button>
+      </ion-fab>
+
     
     </ion-content>
   </ion-page>
 </template>
 
 <script lang="ts">
-import { IonPage, IonHeader, IonToolbar, IonTitle, IonCard, IonCardContent, IonCardTitle, IonCol, IonGrid, IonRow } from '@ionic/vue';
+import { IonPage, IonHeader, IonToolbar, IonTitle, IonCard, IonCardContent, IonCardTitle, IonCol, IonGrid, IonRow, IonFab, IonFabButton, IonIcon, IonContent } from '@ionic/vue';
 import { chevronUpOutline } from 'ionicons/icons';
+import { ref } from 'vue';
 
 export default  {
   name: 'Tab5',
-  components: { IonHeader, IonToolbar, IonTitle, IonPage, IonCard, IonCardContent, IonCardTitle, IonCol, IonGrid, IonRow },
+  components: { IonHeader, IonToolbar, IonTitle, IonPage, IonCard, IonCardContent, IonCardTitle, IonCol, IonGrid, IonRow, IonFab, IonFabButton, IonIcon, IonContent },
   setup() {
+    const content = ref();
+    const scroll = async () => {
+      await  content.value.$el.scrollToTop()
+      //debugger;
+    };
     return{
       chevronUpOutline, 
-      scroll
+      scroll,
+      content
     }
   }
 }
