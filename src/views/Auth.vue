@@ -38,6 +38,13 @@ import firebase from 'firebase'
 
 export default defineComponent({
     components: { IonPage, IonHeader, IonToolbar, IonTitle, IonImg, IonContent, IonLabel, IonInput, IonButton },
+    name: 'Register',
+    data(){
+        return {
+        email: '',
+        password: ''
+        };
+    },
     methods: {
         login() {
             firebase.auth().signInWithEmailAndPassword(this.email, this.password).then(()=>{
