@@ -142,6 +142,10 @@ a {
     --color: black;
 }
 
+.medium {
+    font-size: 2.5em!important;
+}
+
 ion-toggle {
     --background: #fff;
     --background-checked: #f8c09c;

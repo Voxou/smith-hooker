@@ -1,5 +1,6 @@
 import { createRouter, createWebHistory } from '@ionic/vue-router';
 import { RouteRecordRaw } from 'vue-router';
+import firebase from 'firebase';
 import Tabs from '../views/Tabs.vue';
 import Auth from '../views/Auth.vue';
 import Register from '../views/Register.vue';
@@ -43,7 +44,10 @@ const routes: Array<RouteRecordRaw> = [
         path: 'tab5',
         component: () => import('@/views/Tab5.vue')
       }
-    ]
+    ],
+    meta: {
+      authRequired: true,
+    }
   },
   {
     path:'/auth',
@@ -83,6 +87,21 @@ const routes: Array<RouteRecordRaw> = [
 const router = createRouter({
   history: createWebHistory(process.env.BASE_URL),
   routes
-})
+});
+
+router.beforeEach((to, from, next) => {
+  if (to.matched.some(record => record.meta.authRequired)) {
+      if (firebase.auth().currentUser) {
+          next();
+      } else {
+          alert('You must be logged in to see this page');
+          next({
+              path: '/auth',
+          });
+      }
+  } else {
+      next();
+  }
+});
 
 export default router
