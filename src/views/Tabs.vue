@@ -33,12 +33,12 @@
 </template>
 
 <script lang="ts">
-import { IonTabBar, IonTabButton, IonTabs, IonIcon, IonPage, IonFab, IonFabButton } from '@ionic/vue';
+import { IonPage, IonTabs, IonTabBar, IonTabButton, IonIcon, IonFab, IonFabButton } from '@ionic/vue';
 import { homeOutline, personOutline, mapOutline, settingsOutline, peopleCircleOutline } from 'ionicons/icons';
 
 export default {
   name: 'Tabs',
-  components: { IonTabs, IonTabBar, IonTabButton, IonIcon, IonPage, IonFab, IonFabButton },
+  components: { IonPage, IonTabs, IonTabBar, IonTabButton, IonIcon, IonFab, IonFabButton },
   setup() {
     return {
       homeOutline,

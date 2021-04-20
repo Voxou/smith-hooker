@@ -59,13 +59,13 @@
 </template>
 
 <script lang="ts">
-import { IonPage, IonHeader, IonToolbar, IonTitle, IonContent, IonCardTitle, IonCardHeader, IonCardContent, IonCard, IonFab, IonFabButton, IonIcon, IonImg } from '@ionic/vue';
+import { IonPage, IonHeader, IonToolbar, IonTitle, IonImg, IonContent, IonCard, IonCardHeader, IonCardSubtitle, IonCardTitle, IonCardContent, IonButton, IonFooter, IonFab, IonFabButton, IonIcon } from '@ionic/vue';
 import { chevronUpOutline } from 'ionicons/icons';
 import { ref, computed } from 'vue';
 
 export default  {
   name: 'Tab3',
-  components: { IonHeader, IonToolbar, IonTitle, IonContent, IonPage, IonCardTitle, IonCardHeader, IonCardContent, IonCard, IonFab, IonFabButton, IonIcon, IonImg },
+  components: { IonPage, IonHeader, IonToolbar, IonTitle, IonImg, IonContent, IonCard, IonCardHeader, IonCardSubtitle, IonCardTitle, IonCardContent, IonButton, IonFooter, IonFab, IonFabButton, IonIcon },
   setup() {
     const logo = computed(()=> require('../../public/assets/images/logo_en_noir.svg'))
     const content = ref();

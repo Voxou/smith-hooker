@@ -45,7 +45,24 @@
     </ion-content>
   </ion-page>
 </template>
-<style type="text/css">
+
+<script lang="ts">
+import { IonPage, IonHeader, IonToolbar, IonTitle, IonImg, IonContent, IonGrid, IonRow, IonCol, IonLabel, IonInput, IonButton } from '@ionic/vue';
+import { computed } from 'vue';
+
+export default  {
+  name: 'Register',
+  components: { IonPage, IonHeader, IonToolbar, IonTitle, IonImg, IonContent, IonGrid, IonRow, IonCol, IonLabel, IonInput, IonButton },
+  setup() {
+    const logo = computed(()=> require('../../public/assets/images/logo_en_noir.svg'));
+    return{
+      logo
+    }
+  }
+}
+</script>
+
+<style scoped>
 
 ion-item{
     background: hsl(239, 99%, 49%);
@@ -56,18 +73,3 @@ ion-button{
     background: hsl(239, 99%, 49%);
 }
 </style>
-<script lang="ts">
-import { IonPage, IonHeader, IonToolbar, IonTitle, IonContent, IonButton, IonInput, IonGrid, IonRow } from '@ionic/vue';
-import { computed } from 'vue';
-
-export default  {
-  name: 'Register',
-  components: { IonHeader, IonToolbar, IonTitle, IonContent, IonPage, IonButton, IonInput, IonGrid, IonRow },
-  setup() {
-    const logo = computed(()=> require('../../public/assets/images/logo_en_noir.svg'));
-    return{
-      logo
-    }
-  }
-}
-</script>       

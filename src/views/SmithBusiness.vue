@@ -88,12 +88,12 @@
 
 
 <script lang="ts">
-import {IonPage , IonHeader , IonToolbar , IonTitle  , IonLabel , IonInput , IonContent , IonCol, IonGrid , IonRow , } from '@ionic/vue';
+import { IonPage, IonHeader, IonToolbar, IonTitle, IonContent, IonGrid, IonRow, IonCol, IonLabel, IonInput, IonSelect, IonSelectOption, IonDatetime, IonButton } from '@ionic/vue';
 
 
 export default {
     name : 'SmithBusiness',
-    components: {IonPage , IonHeader , IonToolbar , IonTitle , IonLabel , IonInput , IonContent , IonCol , IonGrid, IonRow ,}
+    components: { IonPage, IonHeader, IonToolbar, IonTitle, IonContent, IonGrid, IonRow, IonCol, IonLabel, IonInput, IonSelect, IonSelectOption, IonDatetime, IonButton }
 }
 
 </script>

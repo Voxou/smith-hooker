@@ -45,13 +45,13 @@
 </template>
 
 <script lang="ts">
-import { IonPage, IonHeader, IonToolbar, IonTitle, IonContent, IonCardTitle, IonCardHeader, IonCardContent, IonCard, IonFab, IonFabButton, IonIcon } from '@ionic/vue';
+import { IonPage, IonHeader, IonToolbar, IonTitle, IonContent, IonCard, IonCardHeader, IonCardTitle, IonCardContent, IonButton, IonFooter, IonFab, IonFabButton, IonIcon } from '@ionic/vue';
 import { chevronUpOutline } from 'ionicons/icons';
 import { ref } from 'vue';
 
 export default  {
   name: 'Tab2',
-  components: { IonHeader, IonToolbar, IonTitle, IonContent, IonPage, IonCardTitle, IonCardHeader, IonCardContent, IonCard, IonFab, IonFabButton, IonIcon },
+  components: { IonPage, IonHeader, IonToolbar, IonTitle, IonContent, IonCard, IonCardHeader, IonCardTitle, IonCardContent, IonButton, IonFooter, IonFab, IonFabButton, IonIcon },
   setup() {
     const content = ref();
     const scroll = async () => {
@@ -65,8 +65,8 @@ export default  {
     }
   }
 }
-</script>
 
+</script>
 <style scoped>
 
 ion-card{
