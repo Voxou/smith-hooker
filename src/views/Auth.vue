@@ -8,19 +8,19 @@
         </ion-header>
         <ion-content :fullscreen="true">
             <div class="h-100 os-flex flex-column justify-content-around align-items-center">
-                <form class="" style="height: 80%">
+                <form @submit.prevent="login" class="" style="height: 80%">
                     <ion-grid class="h-100">
                         <ion-row class="h-100" color="primary" justify-content-center>
                             <ion-col class="h-100 os-flex flex-column justify-content-around" align-self-center size-md="6" size-lg="5" size-xs="12">
                                 <div padding  class="os-flex flex-column justify-content-between">
                                     <div class="mb-1 os-flex flex-column justify-content-center">
                                         <ion-label>Login</ion-label>
-                                        <ion-input name="email" placeholder="Adresse mail" type="email" required></ion-input>
+                                        <ion-input v-model="email" name="email" placeholder="Adresse mail" type="email" required></ion-input>
                                     </div>
 
                                     <div class="mb-1 os-flex flex-column justify-content-center">
                                         <ion-label>Mot de passe</ion-label>
-                                        <ion-input name="password" placeholder="Mot de passe" type="password" required></ion-input>
+                                        <ion-input v-model="password" name="password" placeholder="Mot de passe" type="password" required></ion-input>
                                     </div>
                                 </div>
                                 <div padding>
@@ -40,9 +40,20 @@
 <script>
 import { IonPage, IonHeader, IonToolbar, IonTitle, IonContent, IonButton, IonInput, IonGrid, IonRow, IonLabel } from '@ionic/vue';
 import { defineComponent, computed } from 'vue';
+import firebase from 'firebase'
 
 export default defineComponent({
     components: { IonPage, IonHeader, IonToolbar, IonTitle, IonContent, IonButton, IonInput, IonGrid, IonRow, IonLabel },
+    methods: {
+        login() {
+            firebase.auth().signInWithEmailAndPassword(this.email, this.password).then(()=>{
+                alert('logged in');
+                this.$router.push('/tabs/tab3');
+            }).catch(error => {
+                alert(error.message);
+            })
+        }
+    },
     setup() {
     const logo = computed(()=> require('../../public/assets/images/logo_en_noir.svg'));
     return{
