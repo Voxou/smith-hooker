@@ -14,71 +14,52 @@
         >
             <ModalPictures :data="data"></ModalPictures>
         </ion-modal>
-
-
        
         <ion-grid>
             <ion-row>
-
+            <ion-col>
+                    <img src="https://images.unsplash.com/photo-1517433670267-08bbd4be890f?ixid=MXwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHw%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=972&q=80" alt="" />
+            </ion-col>
 
             <ion-col>
                     <img src="https://images.unsplash.com/photo-1517433670267-08bbd4be890f?ixid=MXwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHw%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=972&q=80" alt="" />
             </ion-col>
 
-
             <ion-col>
                     <img src="https://images.unsplash.com/photo-1517433670267-08bbd4be890f?ixid=MXwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHw%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=972&q=80" alt="" />
             </ion-col>
-
-
-            <ion-col>
-                    <img src="https://images.unsplash.com/photo-1517433670267-08bbd4be890f?ixid=MXwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHw%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=972&q=80" alt="" />
-            </ion-col>
-
 
             </ion-row>
         </ion-grid>
-
 
         <ion-grid>
             <ion-row>
-
+            <ion-col>
+                    <img src="https://images.unsplash.com/photo-1565349173908-1cf6bc9fd4ee?ixid=MXwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHw%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=1050&q=80" alt=""/>
+            </ion-col>
 
             <ion-col>
                     <img src="https://images.unsplash.com/photo-1565349173908-1cf6bc9fd4ee?ixid=MXwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHw%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=1050&q=80" alt=""/>
             </ion-col>
 
-
             <ion-col>
                     <img src="https://images.unsplash.com/photo-1565349173908-1cf6bc9fd4ee?ixid=MXwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHw%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=1050&q=80" alt=""/>
             </ion-col>
-
-
-            <ion-col>
-                    <img src="https://images.unsplash.com/photo-1565349173908-1cf6bc9fd4ee?ixid=MXwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHw%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=1050&q=80" alt=""/>
-            </ion-col>
-
 
             </ion-row>
         </ion-grid>
-        
-
     </ion-content>    
   </ion-page>
 </template>
 
-
-
 <script lang="ts">
-import {IonPage, IonHeader, IonToolbar, IonTitle, IonContent, IonRow, IonModal,  } from '@ionic/vue';
+import { IonPage, IonHeader, IonToolbar, IonTitle, IonContent, IonButton, IonModal, IonGrid, IonRow, IonCol } from '@ionic/vue';
 import { ref } from 'vue';
 import ModalPictures from '../components/ModalPictures.vue';
 
-
-
 export default {
     name : 'Pictures',
-    components: {IonPage, IonHeader, IonToolbar, IonTitle, IonContent, IonRow, ModalPictures, IonModal },
+    components: { IonPage, IonHeader, IonToolbar, IonTitle, IonContent, IonButton, IonModal, ModalPictures, IonGrid, IonRow, IonCol },
     setup() {
     const isOpenRef = ref(false);
     const setOpen = (state: boolean) => isOpenRef.value = state;
@@ -86,10 +67,7 @@ export default {
     return { isOpenRef, setOpen, data }
   }
 }
-
 </script>
-
-
 
 <style scoped> 
 img {

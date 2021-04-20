@@ -38,11 +38,11 @@
 </template>
 
 <script>
-import { IonPage, IonHeader, IonToolbar, IonTitle, IonContent, IonButton, IonInput, IonGrid, IonRow, IonLabel } from '@ionic/vue';
+import { IonPage, IonHeader, IonToolbar, IonTitle, IonImg, IonContent, IonGrid, IonRow, IonCol, IonLabel, IonInput, IonButton } from '@ionic/vue';
 import { defineComponent, computed } from 'vue';
 
 export default defineComponent({
-    components: { IonPage, IonHeader, IonToolbar, IonTitle, IonContent, IonButton, IonInput, IonGrid, IonRow, IonLabel },
+    components: { IonPage, IonHeader, IonToolbar, IonTitle, IonImg, IonContent, IonGrid, IonRow, IonCol, IonLabel, IonInput, IonButton },
     setup() {
     const logo = computed(()=> require('../../public/assets/images/logo_en_noir.svg'));
     return{

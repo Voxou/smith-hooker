@@ -31,13 +31,13 @@
 </template>
 
 <script lang="ts">
-import { IonPage, IonHeader, IonToolbar, IonTitle, IonContent, IonFab, IonFabButton, IonIcon } from '@ionic/vue';
+import { IonPage, IonHeader, IonToolbar, IonTitle, IonContent, IonFooter, IonFab, IonFabButton, IonIcon } from '@ionic/vue';
 import { chevronUpOutline, closeCircleOutline } from 'ionicons/icons';
 import { ref } from 'vue';
 
 export default  {
   name: 'Post',
-  components: { IonHeader, IonToolbar, IonTitle, IonContent, IonPage, IonFab, IonFabButton, IonIcon},
+  components: { IonPage, IonHeader, IonToolbar, IonTitle, IonContent, IonFooter, IonFab, IonFabButton, IonIcon },
   setup() {
     const content = ref();
     const scroll = async () => {

@@ -122,19 +122,18 @@
         </ion-fab-button>
       </ion-fab>
 
-    
     </ion-content>
   </ion-page>
 </template>
 
 <script lang="ts">
-import { IonPage, IonHeader, IonToolbar, IonTitle, IonCard, IonCardContent, IonCardTitle, IonCol, IonGrid, IonRow, IonFab, IonFabButton, IonIcon, IonContent, IonToggle, IonFooter, IonCardHeader } from '@ionic/vue';
+import { IonPage, IonHeader, IonToolbar, IonTitle, IonContent, IonCard, IonCardHeader, IonCardTitle, IonCardContent, IonGrid, IonRow, IonCol, IonToggle,IonFooter, IonFab, IonFabButton, IonIcon } from '@ionic/vue';
 import { chevronUpOutline } from 'ionicons/icons';
 import { ref } from 'vue';
 
 export default  {
   name: 'Tab5',
-  components: { IonHeader, IonToolbar, IonTitle, IonPage, IonCard, IonCardContent, IonCardTitle, IonCol, IonGrid, IonRow, IonFab, IonFabButton, IonIcon, IonContent, IonToggle, IonFooter, IonCardHeader },
+  components: { IonPage, IonHeader, IonToolbar, IonTitle, IonContent, IonCard, IonCardHeader, IonCardTitle, IonCardContent, IonGrid, IonRow, IonCol, IonToggle,IonFooter, IonFab, IonFabButton, IonIcon },
   setup() {
     const content = ref();
     const scroll = async () => {

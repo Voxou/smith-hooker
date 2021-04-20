@@ -36,14 +36,12 @@
 </template>
 
 <script lang="ts">
-import { IonPage, IonHeader, IonToolbar, IonTitle, IonContent, IonLabel, IonInput, IonCol, IonIcon,} from '@ionic/vue';
+import { IonPage, IonHeader, IonToolbar, IonTitle, IonContent, IonGrid, IonRow, IonCol, IonIcon, IonLabel, IonInput, IonButton } from '@ionic/vue';
 import { personOutline} from 'ionicons/icons';
-
-
 
 export default  {
   name: 'Tab4',
-  components: {  IonHeader, IonToolbar, IonTitle, IonContent, IonPage,  IonLabel, IonInput, IonCol, IonIcon},
+  components: { IonPage, IonHeader, IonToolbar, IonTitle, IonContent, IonGrid, IonRow, IonCol, IonIcon, IonLabel, IonInput, IonButton },
   setup() {
     return {
       personOutline
@@ -52,7 +50,6 @@ export default  {
   }
 }
 </script>     
-
 
 <style scoped> 
 
@@ -63,6 +60,5 @@ ion-label {
 ion-icon {
   font-size : 5.5em;
   }
-
 
 </style>

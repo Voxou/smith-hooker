@@ -57,13 +57,13 @@
 </template>
 
 <script lang="ts">
-import { IonPage, IonHeader, IonToolbar, IonTitle, IonContent, IonCardTitle, IonCardHeader, IonCardContent, IonCard, IonFab, IonFabButton, IonIcon, IonSlides, IonSlide } from '@ionic/vue';
+import { IonPage, IonHeader, IonToolbar, IonTitle, IonContent, IonCard, IonSlides, IonSlide, IonCardHeader, IonCardTitle, IonCardContent, IonCardSubtitle, IonButton, IonFooter, IonFab, IonFabButton, IonIcon,  } from '@ionic/vue';
 import { chevronUpOutline, closeCircleOutline } from 'ionicons/icons';
 import { ref } from 'vue';
 
 export default  {
   name: 'Smith',
-  components: { IonHeader, IonToolbar, IonTitle, IonContent, IonPage, IonCardTitle, IonCardHeader, IonCardContent, IonCard, IonFab, IonFabButton, IonIcon, IonSlides, IonSlide },
+  components: { IonPage, IonHeader, IonToolbar, IonTitle, IonContent, IonCard, IonSlides, IonSlide, IonCardHeader, IonCardTitle, IonCardContent, IonCardSubtitle, IonButton, IonFooter, IonFab, IonFabButton, IonIcon,  },
   setup() {
     const content = ref();
     const scroll = async () => {

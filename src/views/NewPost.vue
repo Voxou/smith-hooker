@@ -19,7 +19,7 @@
 
                             <div class="mb-1 os-flex flex-grow flex-column justify-content-center">
                                 <ion-label for="content">Contenu</ion-label>
-                                <ion-textarea name="content" placeholder="Ecrire ici..." type="text" required></ion-textarea>
+                                <ion-textarea name="content" placeholder="Ecrire ici..." type="text"  rows="9" required></ion-textarea>
                             </div>
                         </div>
                         <div padding>
@@ -35,12 +35,12 @@
 </template>
 
 <script lang="ts">
-import { IonPage, IonHeader, IonToolbar, IonTitle, IonContent, IonTextarea } from '@ionic/vue';
+import { IonPage, IonHeader, IonToolbar, IonTitle, IonContent, IonGrid, IonRow, IonCol, IonLabel, IonInput, IonTextarea, IonButton } from '@ionic/vue';
 
 
 
 export default  {
   name: 'NewPost',
-  components: { IonHeader, IonToolbar, IonTitle, IonContent, IonPage, IonTextarea }
+  components: { IonPage, IonHeader, IonToolbar, IonTitle, IonContent, IonGrid, IonRow, IonCol, IonLabel, IonInput, IonTextarea, IonButton }
 }
 </script>

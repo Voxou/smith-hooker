@@ -21,7 +21,7 @@
 </template>
 
 <script>
-import { IonContent, IonHeader, IonTitle, IonToolbar, IonButton, IonIcon, modalController} from '@ionic/vue';
+import { IonHeader, IonToolbar, IonTitle, IonButton, IonIcon, IonContent, modalController } from '@ionic/vue';
 import { closeOutline } from 'ionicons/icons';
 import { defineComponent } from 'vue';
 
@@ -31,7 +31,7 @@ export default defineComponent({
     title: { type: String, default: 'Ajouter des photos' },
     close: { type: Function }
   },
-  components: { IonContent, IonHeader, IonTitle, IonToolbar, IonButton, IonIcon},
+  components: { IonHeader, IonToolbar, IonTitle, IonButton, IonIcon, IonContent },
   methods: {
 
       async  closeMe() {
