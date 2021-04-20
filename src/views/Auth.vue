@@ -8,16 +8,16 @@
         </ion-header>
         <ion-content :fullscreen="true">
             <div class="h-100 os-flex flex-column justify-content-around align-items-center">
-                <form class="" style="height: 80%">
+                <form @submit.prevent="login" class="" style="height: 80%">
                     <div padding  class="os-flex flex-column justify-content-between">
                         <div class="mb-1 os-flex flex-column justify-content-center">
                                 <ion-label>Login</ion-label>
-                                <ion-input name="email" placeholder="Adresse mail" type="email" required></ion-input>
+                                <ion-input v-model="email" name="email" placeholder="Adresse mail" type="email" required></ion-input>
                         </div>
 
                         <div class="mb-1 os-flex flex-column justify-content-center">
                                 <ion-label>Mot de passe</ion-label>
-                                <ion-input name="password" placeholder="Mot de passe" type="password" required></ion-input>
+                                <ion-input v_model="password" name="password" placeholder="Mot de passe" type="password" required></ion-input>
                         </div>
                     </div>
                     <div padding>
@@ -33,9 +33,20 @@
 <script>
 import { IonPage, IonHeader, IonToolbar, IonTitle, IonImg, IonContent, IonLabel, IonInput, IonButton } from '@ionic/vue';
 import { defineComponent, computed } from 'vue';
+import firebase from 'firebase'
 
 export default defineComponent({
     components: { IonPage, IonHeader, IonToolbar, IonTitle, IonImg, IonContent, IonLabel, IonInput, IonButton },
+    methods: {
+        login() {
+            firebase.auth().signInWithEmailAndPassword(this.email, this.password).then(()=>{
+                alert('logged in');
+                this.$router.push('/tabs/tab3');
+            }).catch(error => {
+                alert(error.message);
+            })
+        }
+    },
     setup() {
     const logo = computed(()=> require('../../public/assets/images/logo_en_noir.svg'));
     return{
