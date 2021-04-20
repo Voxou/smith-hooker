@@ -32,7 +32,7 @@
 </template>
 
 <script>
-import { IonPage, IonHeader, IonToolbar, IonTitle, IonImg, IonContent, IonGrid, IonRow, IonCol, IonLabel, IonInput, IonButton } from '@ionic/vue';
+import { IonPage, IonHeader, IonToolbar, IonTitle, IonImg, IonContent, IonLabel, IonInput, IonButton } from '@ionic/vue';
 import { defineComponent, computed } from 'vue';
 import firebase from 'firebase'
 
