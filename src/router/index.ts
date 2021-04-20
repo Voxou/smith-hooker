@@ -42,9 +42,33 @@ const routes: Array<RouteRecordRaw> = [
       {
         path: 'tab5',
         component: () => import('@/views/Tab5.vue')
+      },
+      {
+        path:'/smith',
+        component : Smith
+      },
+      {
+        path:'/smith/posts',
+        component : SmithPosts
+      },
+      {
+        path:'/smith/posts/post',
+        component : Post
+      },
+      {
+        path:'/smith/posts/newPost',
+        component : NewPost
+      },
+      {
+        path:'/smith/business',
+        component : SmithBusiness
+      },
+      {
+        path:'/smith/business/pictures',
+        component : Pictures
       }
-    ]
-  },
+    ],
+  }, 
   {
     path:'/auth',
     component: Auth,
@@ -53,31 +77,6 @@ const routes: Array<RouteRecordRaw> = [
     path:'/register',
     component : Register
   },
-  {
-    path:'/smith',
-    component : Smith
-  },
-  {
-    path:'/smith/posts',
-    component : SmithPosts
-  },
-  {
-    path:'/smith/posts/post',
-    component : Post
-  },
-  {
-    path:'/smith/posts/newPost',
-    component : NewPost
-  },
-  {
-    path:'/smith/business',
-    component : SmithBusiness
-  },
-  {
-    path:'/smith/business/pictures',
-    component : Pictures
-  }
-  
 ]
 
 const router = createRouter({
