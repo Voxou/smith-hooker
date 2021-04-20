@@ -43,6 +43,13 @@ import { defineComponent, computed } from 'vue';
 import firebase from 'firebase'
 
 export default defineComponent({
+    name: 'Register',
+    data(){
+        return {
+        email: '',
+        password: ''
+        };
+    },
     components: { IonPage, IonHeader, IonToolbar, IonTitle, IonContent, IonButton, IonInput, IonGrid, IonRow, IonLabel },
     methods: {
         login() {
