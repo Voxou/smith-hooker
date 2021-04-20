@@ -1,8 +1,9 @@
 <template>
   <ion-page>
     <ion-header>
-      <ion-toolbar>
+      <ion-toolbar class="os-relative">
         <ion-title>Mon compte</ion-title>
+        <ion-icon @click="logout" class="os-absolute myButton2 medium" :icon="powerOutline"></ion-icon>
       </ion-toolbar>
     </ion-header>
     <ion-content class="ion-text-center" :fullscreen="true">
@@ -30,18 +31,31 @@
 
 <script lang="ts">
 import { IonPage, IonHeader, IonToolbar, IonTitle, IonContent, IonIcon, IonLabel, IonInput, IonButton } from '@ionic/vue';
-import { personOutline} from 'ionicons/icons';
+import { personOutline, powerOutline} from 'ionicons/icons';
+import firebase from 'firebase';
+import { defineComponent } from 'vue';
 
-export default  {
+
+export default defineComponent({
   name: 'Tab4',
   components: { IonPage, IonHeader, IonToolbar, IonTitle, IonContent, IonIcon, IonLabel, IonInput, IonButton },
+  methods: {
+    logout() {
+      firebase.auth().signOut().then(()=>{
+        alert('logged out');
+        this.$router.push('/auth')
+      }).catch(error=>{
+        alert(error.message)
+      })
+    }
+  },
   setup() {
     return {
-      personOutline
-
+      personOutline,
+      powerOutline
     }
   }
-}
+})
 </script>     
 
 <style scoped> 
