@@ -16,6 +16,7 @@
     "bootstrap": "^4.5.3",
     "bootstrap-vue": "^2.21.0",
     "core-js": "^3.6.5",
+    "firebase": "^8.4.1",
     "vue": "^3.0.0-0",
     "vue-router": "^4.0.0-0"
   },
@@ -37,7 +38,7 @@
     "eslint": "^6.7.2",
     "eslint-plugin-vue": "^7.0.0-0",
     "typescript": "~3.9.3",
-    "vue-jest": "^5.0.0-0"
+    "vue-jest": "^5.0.0-alpha.8"
   },
   "description": "An Ionic project"
 }

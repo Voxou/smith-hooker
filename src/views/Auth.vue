@@ -8,28 +8,22 @@
         </ion-header>
         <ion-content :fullscreen="true">
             <div class="h-100 os-flex flex-column justify-content-around align-items-center">
-                <form class="" style="height: 80%">
-                    <ion-grid class="h-100">
-                        <ion-row class="h-100" color="primary" justify-content-center>
-                            <ion-col class="h-100 os-flex flex-column justify-content-around" align-self-center>
-                                <div padding  class="os-flex flex-column justify-content-between">
-                                    <div class="mb-1 os-flex flex-column justify-content-center">
-                                        <ion-label>Login</ion-label>
-                                        <ion-input name="email" placeholder="Adresse mail" type="email" required></ion-input>
-                                    </div>
+                <form @submit.prevent="login" class="" style="height: 80%">
+                    <div padding  class="os-flex flex-column justify-content-between">
+                        <div class="mb-1 os-flex flex-column justify-content-center">
+                                <ion-label>Login</ion-label>
+                                <ion-input v-model="email" name="email" placeholder="Adresse mail" type="email" required></ion-input>
+                        </div>
 
-                                    <div class="mb-1 os-flex flex-column justify-content-center">
-                                        <ion-label>Mot de passe</ion-label>
-                                        <ion-input name="password" placeholder="Mot de passe" type="password" required></ion-input>
-                                    </div>
-                                </div>
-                                <div padding>
-                                    <ion-button  size="large" type="submit" expand="block">Connexion</ion-button>
-                                    <a href="/register">Je n'ai pas de compte, j'en créé un</a>
-                                </div>
-                            </ion-col>
-                        </ion-row>
-                    </ion-grid>
+                        <div class="mb-1 os-flex flex-column justify-content-center">
+                                <ion-label>Mot de passe</ion-label>
+                                <ion-input v-model="password" name="password" placeholder="Mot de passe" type="password" required></ion-input>
+                        </div>
+                    </div>
+                    <div padding>
+                        <ion-button  size="large" type="submit" expand="block">Connexion</ion-button>
+                        <a href="/register">Je n'ai pas de compte, j'en créé un</a>
+                    </div>
                 </form>
             </div>
         </ion-content>
@@ -38,11 +32,34 @@
 </template>
 
 <script>
-import { IonPage, IonHeader, IonToolbar, IonTitle, IonImg, IonContent, IonGrid, IonRow, IonCol, IonLabel, IonInput, IonButton } from '@ionic/vue';
+import { IonPage, IonHeader, IonToolbar, IonTitle, IonImg, IonContent, IonLabel, IonInput, IonButton } from '@ionic/vue';
 import { defineComponent, computed } from 'vue';
+import firebase from 'firebase'
 
 export default defineComponent({
-    components: { IonPage, IonHeader, IonToolbar, IonTitle, IonImg, IonContent, IonGrid, IonRow, IonCol, IonLabel, IonInput, IonButton },
+    components: { IonPage, IonHeader, IonToolbar, IonTitle, IonImg, IonContent, IonLabel, IonInput, IonButton },
+    name: 'Register',
+    data(){
+        return {
+        email: '',
+        password: ''
+        };
+    },
+    methods: {
+        login() {
+            firebase.auth().setPersistence(firebase.auth.Auth.Persistence.LOCAL).then(()=>{
+                return firebase.auth().signInWithEmailAndPassword(this.email, this.password).then(()=>{
+                    alert('logged in');
+                    this.$router.push('/tabs/tab3');
+                }).catch(error => {
+                    alert(error.message);
+                })
+            }).catch(error => {
+                alert(error.message);
+            })
+            
+        }
+    },
     setup() {
     const logo = computed(()=> require('../../public/assets/images/logo_en_noir.svg'));
     return{
