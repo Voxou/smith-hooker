@@ -17,7 +17,7 @@
 
                         <div class="mb-1 os-flex flex-column justify-content-center">
                                 <ion-label>Mot de passe</ion-label>
-                                <ion-input v_model="password" name="password" placeholder="Mot de passe" type="password" required></ion-input>
+                                <ion-input v-model="password" name="password" placeholder="Mot de passe" type="password" required></ion-input>
                         </div>
                     </div>
                     <div padding>
@@ -47,12 +47,17 @@ export default defineComponent({
     },
     methods: {
         login() {
-            firebase.auth().signInWithEmailAndPassword(this.email, this.password).then(()=>{
-                alert('logged in');
-                this.$router.push('/tabs/tab3');
+            firebase.auth().setPersistence(firebase.auth.Auth.Persistence.LOCAL).then(()=>{
+                return firebase.auth().signInWithEmailAndPassword(this.email, this.password).then(()=>{
+                    alert('logged in');
+                    this.$router.push('/tabs/tab3');
+                }).catch(error => {
+                    alert(error.message);
+                })
             }).catch(error => {
                 alert(error.message);
             })
+            
         }
     },
     setup() {
