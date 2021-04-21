@@ -37,7 +37,7 @@
 </template>
 
 <script lang="ts">
-import { IonPage, IonHeader, IonToolbar, IonTitle, IonContent, IonLabel, IonInput, IonCol, IonIcon,} from '@ionic/vue';
+import { IonPage, IonHeader, IonToolbar, IonTitle, IonContent, IonIcon, IonLabel, IonInput, IonButton } from '@ionic/vue';
 import { personOutline, powerOutline} from 'ionicons/icons';
 import firebase from 'firebase';
 import { defineComponent } from 'vue';
@@ -45,7 +45,7 @@ import { defineComponent } from 'vue';
 
 export default defineComponent({
   name: 'Tab4',
-  components: {  IonHeader, IonToolbar, IonTitle, IonContent, IonPage,  IonLabel, IonInput, IonCol, IonIcon},
+  components: { IonPage, IonHeader, IonToolbar, IonTitle, IonContent, IonIcon, IonLabel, IonInput, IonButton },
   methods: {
     logout() {
       firebase.auth().signOut().then(()=>{

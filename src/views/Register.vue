@@ -47,12 +47,13 @@
 </template>
 
 <script lang="ts">
-import { IonPage, IonHeader, IonToolbar, IonTitle, IonContent, IonButton, IonInput, IonGrid, IonRow } from '@ionic/vue';
+import { IonPage, IonHeader, IonToolbar, IonTitle, IonImg, IonContent, IonGrid, IonRow, IonCol, IonLabel, IonInput, IonButton } from '@ionic/vue';
 import { computed, defineComponent } from 'vue';
 import firebase from 'firebase';
 
 export default defineComponent ({
   name: 'Register',
+  components: { IonPage, IonHeader, IonToolbar, IonTitle, IonImg, IonContent, IonGrid, IonRow, IonCol, IonLabel, IonInput, IonButton },
   data(){
     return {
       email: '',
@@ -60,7 +61,6 @@ export default defineComponent ({
       confirm: ''
     };
   },
-  components: { IonHeader, IonToolbar, IonTitle, IonContent, IonPage, IonButton, IonInput, IonGrid, IonRow },
   methods: {
     register() {
       if(this.password == this.confirm) {
