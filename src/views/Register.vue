@@ -11,7 +11,7 @@
         <form class="" style="height: 80%">
           <ion-grid class="h-100">
               <ion-row class="h-100" color="primary" justify-content-center>
-                  <ion-col class="h-100 os-flex flex-column justify-content-around" align-self-center size-md="6" size-lg="5" size-xs="12">
+                  <ion-col class="h-100 os-flex flex-column justify-content-around" align-self-center>
                       <div padding class="os-flex flex-column justify-content-between">
                           <div class="mb-1 os-flex flex-column justify-content-center">
                               <ion-label>Nom et prénom</ion-label>
