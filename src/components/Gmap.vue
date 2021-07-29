@@ -17,7 +17,7 @@ export default {
         //load in the google script
         onBeforeMount(()=>{
             //key is the .env file or a string
-            const key = "AIzaSyBJ-_sW8y-yaYKFfnjzOuo8y6GNkj23iEM"
+            //const key = "AIzaSyBJ-_sW8y-yaYKFfnjzOuo8y6GNkj23iEM"
 
             //create the script element to load
             const googleMapScript = document.createElement("SCRIPT");

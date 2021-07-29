@@ -1,6 +1,6 @@
 import { createRouter, createWebHistory } from '@ionic/vue-router';
 import { RouteRecordRaw } from 'vue-router';
-import firebase from 'firebase';
+//import firebase from 'firebase';
 import Tabs from '../views/Tabs.vue';
 import Auth from '../views/Auth.vue';
 import Register from '../views/Register.vue';
